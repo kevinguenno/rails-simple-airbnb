@@ -1,0 +1,9 @@
+<h4><%= @flat.name  %></h4>
+<p>Adresse: <%= @flat.address %></p>
+<p>Description: <%= @flat.description %></p>
+<p>Prix par nuité: <%= @flat.price_per_night %></p>
+<p>Nombre de personne: <%= @flat.number_of_guests %></p>
+
+<%= link_to "Modifier l'annonce", edit_flat_path  %>
+<%= link_to "Supprimer l'annonce", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: 'Etes-vous sur?'} %>
+<%= link_to 'Retour à la liste des appartements', flats_path %>
